@@ -1,5 +1,5 @@
 <div align="center">
-  <h2><b> Understanding and Reasoning Streaming Time Series with Specialized LLM Agents </b></h2>
+  <h2><b> <img src="https://github.com/user-attachments/assets/387015cb-2f6f-4b61-81e4-10815b364528" style="width:65;height:30px;"> Understanding and Reasoning Streaming Time Series with Specialized LLM Agents </b></h2>
 </div>
 
 ![Topic](https://img.shields.io/badge/Streaming%20Time%20Series%20-%20LLM--Agents-blueviolet)
@@ -11,6 +11,7 @@
 <!--[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Qwen3-TSVL-4B-Web%20Demo-blue)](https://huggingface.co/spaces/Leeway2027/Qwen3-TSVL-4B)-->
 
 This repository provides the code for our paper, which introduces StreamTS-Agents, a multi-agent framework that enhances LLM-based reasoning over streaming time series. It employs specialized agents for monitoring and reasoning, supported by a pattern-mapping caption storage, to overcome challenges of continuous temporal understanding, agent cooperation, and temporal context collapse. The framework significantly improves performance on understanding and reasoning tasks.
+
 >  ✨ If you find our work useful for your research, please consider giving it a <strong>star ⭐ on GitHub</strong> to stay updated with future releases.
 
 ## Demonstration
@@ -23,16 +24,18 @@ StreamTS-Agents can be directly applied to any LLMs without retraining:
 -->
 
 ### Example Demonstration
-Here is an example of specialized LLM agents operating over streaming time series in gold trading. The monitoring agent generates captions, and the reasoning agent answers the user's questions.
+Here is an example of specialized LLM agents operating over streaming time series in gold trading. The monitoring agent observes the gold price, records captions at detected temporal patterns, and conveys them to the reasoning agent, which answers the user's questions.
+
 <p align="center">
   <img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/88d697bc-7577-42a4-a303-511e13b93c7a" />
 </p>
 
 ## Abstract
-Streaming time series collected sequentially over time in real-world applications, such as real-time financial trading and database usage monitoring. Multi-agent collaboration enhances long-term dependencies in LLM-based reasoning over streaming time series. However, existing studies often overlook specialization among agents with distinct objectives. To bridge this gap, this paper introduces a multi-agent specialized paradigm, in which agents pursue complementary goals such as low-cost monitoring and high-quality reasoning. However, this setting faces three major challenges: (i) continuous temporal understanding, (ii) effective cooperation among specialized agents, and (iii) temporal context collapse. To address these challenges, this paper introduces StreamTS-Agents, a multi-agent framework comprising: (1) a monitoring agent that generates descriptive and analytical captions to enable continuous temporal understanding over streaming time series, (2) a caption storage that maps captions to patterns for retrieval, thereby facilitating multi-agent cooperation, and (3) a reasoning agent that performs caption-guided chain-of-thought reasoning and maintains an insight playbook to mitigate temporal context collapse. Experiments demonstrate that StreamTS-Agents achieves superior performance in both cost and quality.
+Streaming time series are collected sequentially over time in real-world applications, such as real-time financial trading and database usage monitoring. Multi-agent collaboration enhances long-term dependencies in LLM-based reasoning over streaming time series. However, existing studies often overlook specialization among agents with distinct yet interdependent objectives. To bridge this gap, this paper introduces a multi-agent specialized paradigm, in which agents pursue complementary goals such as low-cost monitoring and high-quality reasoning. This setting faces three major challenges: (1) continuous temporal understanding, (2) effective cooperation among specialized agents, and (3) temporal context collapse. To address these challenges, this paper introduces StreamTS-Agents, a multi-agent framework comprising: (a) a monitoring agent that generates descriptive and analytical captions to enable continuous temporal understanding over streaming time series, (b) a caption storage that maps captions to patterns for retrieval, thereby facilitating multi-agent cooperation, and (c) a reasoning agent that performs caption-guided chain-of-thought (CoT) reasoning and maintains an insight playbook to mitigate temporal context collapse.
 
 ## Motivation
-Existing works typically overlook specialization among agents with contrasting goals. We categorize existing work into two paradigms: paradigm ① single-agent unified paradigm and paradigm ② multi-agent cooperative paradigm. However, paradigm ① omits middle steps for complex tasks, and paradigm ② lacks specialization for distinct objectives. To overcome these limitations, we define paradigm ③ multi-agent specialized paradigm, designed for LLM agents with contrasting goals, such as low-cost monitoring and high-quality reasoning.
+Existing works typically overlook specialization among agents with complementary goals. We categorize existing work into two paradigms: ① Single-agent Unified Paradigm and ② Multi-agent Cooperative Paradigm. However, Paradigm ① omits middle steps for complex tasks, and Paradigm ② lacks specialization for distinct objectives. To overcome these limitations, we define ③ Multi-agent Specialized Paradigm, designed for LLM agents with complementary goals, such as low-cost monitoring and high-quality reasoning.
+
 <p align="center">
   <img width="650" height="480" alt="image" src="https://github.com/user-attachments/assets/53f2cad0-3ef9-4317-a4f9-c0914c5c094f" />
 </p>
