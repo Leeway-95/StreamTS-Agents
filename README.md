@@ -10,7 +10,7 @@
 
 <!--[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Qwen3-TSVL-4B-Web%20Demo-blue)](https://huggingface.co/spaces/Leeway2027/Qwen3-TSVL-4B)-->
 
-This repository provides the code for our paper, which introduces StreamTS-Agents, a multi-agent framework that enhances LLM-based reasoning over streaming time series. It employs specialized agents for monitoring and reasoning, supported by a pattern-mapping caption storage, to overcome challenges of continuous temporal understanding, agent cooperation, and temporal context collapse. The framework significantly improves performance on understanding and reasoning tasks.
+This repository provides the code for our paper, which introduces StreamTS-Agents, a multi-agent framework that enhances LLM-based reasoning over streaming time series.
 
 >  ✨ If you find our work useful for your research, please consider giving it a <strong>star ⭐ on GitHub</strong> to stay updated with future releases.
 
@@ -41,6 +41,8 @@ Existing works typically overlook specialization among agents with complementary
 </p>
 
 ## Case Study
+StreamTS-Agents employ specialized agents for monitoring and reasoning, supported by a pattern-mapping caption storage, to overcome challenges of continuous temporal understanding, agent cooperation, and temporal context collapse. The framework significantly improves performance on understanding and reasoning tasks.
+ 
 <p align="center">
   <img width="800" height="2000" alt="image" src="https://github.com/user-attachments/assets/963725dd-e630-4b01-8b51-cfb5156be00e" />
 </p>
