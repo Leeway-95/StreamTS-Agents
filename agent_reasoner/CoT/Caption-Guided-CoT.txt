@@ -1,0 +1,25 @@
+### Task:
+{{ reasoning_task }}
+
+### Input:
+Temporal Range: {{ temporal_range }}
+Captions: {{ caption }}
+
+### Instruction:
+{{ CoT }}
+
+### Requirement & Context:
+Please generate task-specific insights and operational experiences. The existing playbook context for reference is:
+{{ context_playbook }}
+
+### Output Format:
+You must output a valid JSON object with the following structure:
+{
+  "answer": "Your direct answer to the task question here",
+  "reasoning": "Step-by-step reasoning process",
+  "playbook_updates": {
+    "insights": ["List of new insights gained from this task", "Each insight should be a string"],
+    "experiences": ["List of new experiences gained from this task", "Each experience should be a string"],
+    "best_practices": ["List of recommended best practices", "Each practice should be a string"]
+  }
+}

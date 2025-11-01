@@ -1,0 +1,33 @@
+
+EVENT CLASSIFICATION TASK:
+Analyze the time series data to predict event labels based on temporal patterns and characteristics.
+
+Goal 1: Event Label Prediction (Pred_Labels)
+<</Users/liwei.1868/PycharmProjects/InfTS-Agents/dataset_SPECIFIC_INSTRUCTION>>
+
+- Analyze the time series patterns to predict the most likely event label.
+- Consider the temporal context and representative image for accurate classification.
+- If Representative Subsequences plots are provided, integrate visual cues with statistical analysis.
+- According to <<Positions>>, provide corresponding predictions within the time-series data ranges.
+- Your predictions must be valid labels from <<Domain_Label>>.
+
+Goal 2: Contribution Assessment (Impact_Scores)
+- Assign an Impact Score to each Representative Subsequence based on pattern similarity and relevance to event prediction.
+- All scores must sum to 1.000 with exactly 3 decimal places.
+- Number of scores = number of Representative Subsequences.
+
+CRITICAL OUTPUT REQUIREMENTS:
+1. You MUST respond with ONLY valid JSON format.
+2. Do NOT include any explanations, reasoning, or additional text.
+3. The "Pred_Labels" value must be a list of valid strings corresponding to the number of <<Positions>>.
+
+FINAL OUTPUT FORMAT (strict JSON only):
+{
+  "Pred_Labels": ["label_for_pos1", "label_for_pos2", "label_for_pos3"],
+  "Impact_Scores": [0.123, 0.456, 0.321, 0.100],
+  "playbook_updates": {
+    "insights": ["List of new insights gained from this forecasting task", "Each insight should be a string"],
+    "experiences": ["List of new experiences gained from this forecasting task", "Each experience should be a string"],
+    "best_practices": ["List of recommended best practices for event forecasting", "Each practice should be a string"]
+  }
+}

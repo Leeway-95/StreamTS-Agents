@@ -1,0 +1,77 @@
+
+Temporal Patterns:
+- Pri-patterns: Outlier > Trend > Seasonal > Volatility (priority order).
+- Sub-patterns:
+  - Outlier: Sudden Spike (sharp, short-lived peak with full reversion), Level Shift (abrupt and sustained baseline change)
+  - Trend: Upward (long-term increase), Downward (long-term decrease)
+  - Seasonal: Fixed (stable recurring cycles), Shifting (recurring cycles with amplitude changes)
+  - Volatility: Increased (rising fluctuation magnitude), Decreased (declining fluctuation magnitude)
+- If plots (Representative Subsequences) are provided, integrate visual pattern recognition with statistical analysis: X-axis = time, Y-axis = values, red line = actual sequence.
+
+Goal 1: Systematic Question Analysis for <<Questions>>
+Critical Analysis Guidelines:
+1. **Pattern Decomposition**: Break down each question into component pattern elements
+2. **Statistical Validation**: Apply quantitative measures to validate pattern characteristics
+3. **Temporal Context**: Consider the time scale and domain context of each pattern
+4. **Parameter Precision**: Calculate exact numerical parameters (positions, amplitudes, periods, etc.)
+5. **Confidence Assessment**: Evaluate the statistical significance of identified patterns
+
+Enhanced Pattern Recognition Process:
+- Step 1: Parse question requirements and identify target pattern types
+- Step 2: Apply statistical analysis (mean, variance, slope, FFT, autocorrelation) to relevant data segments
+- Step 3: Validate patterns against quantitative thresholds defined above
+- Step 4: Extract precise numerical parameters (start/end positions, amplitudes, periods, standard deviations)
+- Step 5: Cross-validate with Representative Subsequences when available
+- Step 6: Format results with appropriate precision and units
+
+Quality Assurance for Pattern Analysis:
+- Ensure all numerical parameters are statistically justified
+- Validate pattern boundaries using change-point detection methods
+- Apply domain-specific constraints and typical value ranges
+- Cross-check pattern consistency across multiple analysis methods
+- Provide confidence intervals or uncertainty estimates where appropriate
+
+Output Format Requirements:
+- "Pred_Labels": Structured array of detailed pattern analysis results
+- Each pattern must include: type, quantitative parameters, and statistical characteristics
+- Use consistent terminology aligned with the temporal pattern framework
+- Ensure numerical precision appropriate to the data resolution
+
+Goal 2: Enhanced Representative Subsequence Impact Assessment
+Advanced Impact Score Calculation:
+- Assign Impact Scores (I-scores) based on multiple criteria:
+  * **Pattern Relevance**: Correlation strength with question-specific patterns (weight: 40%)
+  * **Statistical Significance**: Confidence level of pattern matches (weight: 30%)
+  * **Temporal Proximity**: Recency and frequency of pattern occurrence (weight: 20%)
+  * **Domain Importance**: Contextual relevance to specific time series characteristics (weight: 10%)
+- Constraints:
+  * Sum of all I-scores must equal 1.000 exactly
+  * Each I-score must have exactly 3 decimal places
+  * Number of I-scores must equal number of Representative Subsequences
+  * I-scores should reflect actual contribution strength (avoid uniform distribution)
+
+Validation Requirements:
+- Verify mathematical constraints (sum = 1.000)
+- Ensure logical consistency between pattern analysis and impact scores
+- Cross-validate results against statistical evidence
+- Maintain JSON format compliance with proper data types
+
+FINAL OUTPUT FORMAT (strict JSON only, no additional text or explanations):
+{
+  "Pred_Labels": [
+    [
+      {"type": "decrease", "start": 14.29, "end": 45.67, "amplitude": -46.82, "slope": -1.23, "r_squared": 0.89, "confidence": 0.95},
+      {"type": "no periodic fluctuation", "period": 0.0, "amplitude": 0.0, "fft_peak_ratio": 0.12, "autocorr_max": 0.23},
+      {"type": "noisy", "std": 0.93, "variance_ratio": 1.45, "snr": 2.34, "baseline_std": 0.64}
+    ],
+    [
+      {"type": "decrease after upward spike", "spike_position": 127, "spike_amplitude": 69.33, "spike_duration": 3, "post_decrease_slope": -2.45, "recovery_time": 12}
+    ]
+  ],
+  "Impact_Scores": [0.234, 0.456, 0.189, 0.121],
+  "playbook_updates": {
+    "insights": ["List of new insights gained from this reasoning task", "Each insight should be a string"],
+    "experiences": ["List of new experiences gained from this reasoning task", "Each experience should be a string"],
+    "best_practices": ["List of recommended best practices for reasoning analysis", "Each practice should be a string"]
+  }
+}
