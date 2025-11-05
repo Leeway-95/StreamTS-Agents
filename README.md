@@ -15,9 +15,9 @@ This repository provides the code for our paper, which introduces StreamTS-Agent
 >  ✨ If you find our work useful for your research, please consider giving it a <strong>star ⭐ on GitHub</strong> to stay updated with future releases.
 
 ## Demonstration
-<!--
-https://github.com/user-attachments/assets/35c9050c-edd0-400c-8e77-6366828031e0
+https://github.com/user-attachments/assets/5ae6cd92-19d5-43d1-855b-3d2670bce14f
 
+<!--
 ## Key Features
 StreamTS-Agents can be directly applied to any LLMs without retraining:
 - ✅ **Native support for multivariate time series**
